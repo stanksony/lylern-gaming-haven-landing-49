@@ -1,66 +1,76 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Zap, GamepadIcon, ArrowRight } from "lucide-react";
+import { Zap, GamepadIcon, ArrowRight, Rocket } from "lucide-react";
 
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black relative overflow-hidden">
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-black to-purple-900/30"></div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <div className="animate-fade-in" style={{"--delay-200": true} as any}>
-          <Badge className="mb-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-blue-300 border border-blue-500/30 px-6 py-3 text-sm font-medium backdrop-blur-sm animate-scale-in" style={{"--delay-300": true} as any}>
-            <Zap className="w-4 h-4 mr-2" />
-            Premium Game & Bot Hosting
+          <Badge className="mb-12 bg-gradient-to-r from-blue-500/30 to-purple-500/30 text-blue-200 border-2 border-blue-400/50 px-8 py-4 text-lg font-bold backdrop-blur-md shadow-2xl animate-scale-in" style={{"--delay-300": true} as any}>
+            <Rocket className="w-6 h-6 mr-3 text-blue-300" />
+            🚀 NEXT-GEN HOSTING IS HERE
           </Badge>
           
-          <h1 className="text-7xl md:text-9xl font-black text-white mb-8 leading-none animate-fade-in tracking-tight" style={{"--delay-400": true} as any}>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-purple-400">
+          <h1 className="text-8xl md:text-[12rem] font-black text-white mb-12 leading-none animate-fade-in tracking-tight" style={{"--delay-400": true} as any}>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-purple-300 drop-shadow-2xl">
               LYLERN
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed animate-fade-in font-light" style={{"--delay-500": true} as any}>
-            Experience next-generation game server hosting with 
-            <span className="text-blue-400 font-medium"> enterprise-grade infrastructure</span>. 
-            Deploy instantly, scale effortlessly, dominate globally.
+          <p className="text-2xl md:text-4xl text-gray-200 mb-20 max-w-5xl mx-auto leading-relaxed animate-fade-in font-light" style={{"--delay-500": true} as any}>
+            Stop settling for trash hosting. 
+            <span className="text-blue-300 font-semibold"> Deploy like a boss</span>, 
+            <span className="text-purple-300 font-semibold"> scale like a legend</span>, 
+            <span className="text-cyan-300 font-semibold"> dominate like a champion</span>.
+            <br />
+            <span className="text-xl md:text-2xl text-gray-400 mt-4 block">
+              Your games deserve better. Your players demand it. 🎮
+            </span>
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{"--delay-600": true} as any}>
-            <Button size="lg" className="group bg-gradient-to-r from-blue-600 via-blue-500 to-purple-600 hover:from-blue-700 hover:via-blue-600 hover:to-purple-700 text-white text-lg px-16 py-8 h-auto rounded-2xl font-semibold transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 border-0">
-              Start Free Trial
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+          <div className="flex flex-col sm:flex-row gap-8 justify-center animate-fade-in" style={{"--delay-600": true} as any}>
+            <Button size="lg" className="group bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 hover:from-blue-600 hover:via-blue-700 hover:to-purple-700 text-white text-2xl px-20 py-10 h-auto rounded-2xl font-bold transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/50 border-0 shadow-xl">
+              🔥 START DOMINATING NOW
+              <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-gray-600 bg-black/50 text-gray-300 hover:bg-gray-900/80 hover:text-white hover:border-gray-400 text-lg px-16 py-8 h-auto rounded-2xl font-semibold transition-all duration-500 hover:scale-105 backdrop-blur-sm">
-              View Plans
+            <Button size="lg" variant="outline" className="border-3 border-gray-500 bg-black/70 text-gray-200 hover:bg-gray-800/90 hover:text-white hover:border-gray-300 text-2xl px-20 py-10 h-auto rounded-2xl font-bold transition-all duration-500 hover:scale-110 backdrop-blur-md shadow-xl">
+              💰 VIEW PRICING
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 animate-fade-in" style={{"--delay-700": true} as any}>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wider">Uptime</div>
+          {/* Enhanced Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mt-32 animate-fade-in" style={{"--delay-700": true} as any}>
+            <div className="text-center group hover:scale-110 transition-transform duration-300">
+              <div className="text-5xl font-black text-blue-400 mb-3">99.9%</div>
+              <div className="text-gray-300 text-lg uppercase tracking-wider font-medium">UPTIME BEAST</div>
+              <div className="text-gray-500 text-sm mt-1">No downtime, ever</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wider">Game Types</div>
+            <div className="text-center group hover:scale-110 transition-transform duration-300">
+              <div className="text-5xl font-black text-purple-400 mb-3">50+</div>
+              <div className="text-gray-300 text-lg uppercase tracking-wider font-medium">GAME TYPES</div>
+              <div className="text-gray-500 text-sm mt-1">Every game you love</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">15+</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wider">Locations</div>
+            <div className="text-center group hover:scale-110 transition-transform duration-300">
+              <div className="text-5xl font-black text-cyan-400 mb-3">15+</div>
+              <div className="text-gray-300 text-lg uppercase tracking-wider font-medium">GLOBAL ZONES</div>
+              <div className="text-gray-500 text-sm mt-1">Lightning fast worldwide</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wider">Support</div>
+            <div className="text-center group hover:scale-110 transition-transform duration-300">
+              <div className="text-5xl font-black text-green-400 mb-3">24/7</div>
+              <div className="text-gray-300 text-lg uppercase tracking-wider font-medium">ELITE SUPPORT</div>
+              <div className="text-gray-500 text-sm mt-1">Real humans, real help</div>
             </div>
           </div>
         </div>

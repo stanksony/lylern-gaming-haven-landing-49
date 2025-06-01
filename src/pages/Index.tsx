@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -65,40 +64,33 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in-right" style={{"--delay-400": true} as any}>
-              <img 
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80" 
-                alt="Gaming setup with multiple monitors" 
-                className="rounded-lg shadow-2xl hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="space-y-6 animate-fade-in" style={{"--delay-500": true} as any}>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center">
-                  <GamepadIcon className="w-6 h-6 text-cyan-400" />
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-8 animate-fade-in" style={{"--delay-500": true} as any}>
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-cyan-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <GamepadIcon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">50+ Game Templates</h3>
-                  <p className="text-gray-300">Minecraft, CS2, Rust, Valheim, and many more</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">50+ Game Templates</h3>
+                  <p className="text-gray-300 text-lg">Minecraft, CS2, Rust, Valheim, and many more</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-cyan-400" />
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-cyan-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Instant Deployment</h3>
-                  <p className="text-gray-300">Get your server running in under 60 seconds</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Instant Deployment</h3>
+                  <p className="text-gray-300 text-lg">Get your server running in under 60 seconds</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center">
-                  <Server className="w-6 h-6 text-cyan-400" />
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-cyan-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Server className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Global Infrastructure</h3>
-                  <p className="text-gray-300">15+ locations worldwide for optimal latency</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Global Infrastructure</h3>
+                  <p className="text-gray-300 text-lg">15+ locations worldwide for optimal latency</p>
                 </div>
               </div>
             </div>
@@ -116,42 +108,35 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in" style={{"--delay-400": true} as any}>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                  <Bot className="w-6 h-6 text-blue-400" />
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-8 animate-fade-in" style={{"--delay-400": true} as any}>
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-blue-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Bot className="w-8 h-8 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">24/7 Uptime</h3>
-                  <p className="text-gray-300">Keep your bots running around the clock</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">24/7 Uptime</h3>
+                  <p className="text-gray-300 text-lg">Keep your bots running around the clock</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-blue-400" />
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-blue-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-8 h-8 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Secure Environment</h3>
-                  <p className="text-gray-300">Isolated containers with enterprise security</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Secure Environment</h3>
+                  <p className="text-gray-300 text-lg">Isolated containers with enterprise security</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-blue-400" />
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-blue-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-8 h-8 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Auto-Restart</h3>
-                  <p className="text-gray-300">Automatic recovery from crashes and errors</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Auto-Restart</h3>
+                  <p className="text-gray-300 text-lg">Automatic recovery from crashes and errors</p>
                 </div>
               </div>
-            </div>
-            <div className="animate-slide-in-right" style={{"--delay-500": true} as any}>
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" 
-                alt="Programming code on monitor" 
-                className="rounded-lg shadow-2xl hover:scale-105 transition-transform duration-500"
-              />
             </div>
           </div>
         </div>

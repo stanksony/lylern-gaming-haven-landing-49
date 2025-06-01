@@ -1,7 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Zap, Shield, Clock, Users, Server, GamepadIcon, Star } from "lucide-react";
+import { Check, Zap, Shield, Clock, Users, Server, GamepadIcon, Star, Bot } from "lucide-react";
 
 const Index = () => {
   return (
@@ -15,6 +16,8 @@ const Index = () => {
               <span className="text-2xl font-bold text-white">Lylern</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <a href="#game-hosting" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Game Hosting</a>
+              <a href="#bot-hosting" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Bot Hosting</a>
               <a href="#features" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Features</a>
               <a href="#pricing" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Pricing</a>
               <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Contact</a>
@@ -30,14 +33,14 @@ const Index = () => {
           <div className="animate-fade-in" style={{"--delay-200": true} as any}>
             <Badge className="mb-6 bg-cyan-600/20 text-cyan-300 border-cyan-500/30 animate-scale-in" style={{"--delay-300": true} as any}>
               <Zap className="w-4 h-4 mr-1 animate-pulse" />
-              Lightning Fast Gaming Servers
+              Lightning Fast Game & Bot Hosting
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in" style={{"--delay-400": true} as any}>
-              Game Server Hosting
+              Game & Bot Hosting
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 animate-pulse"> Made Simple</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{"--delay-500": true} as any}>
-              Deploy your game servers instantly with Lylern. From free community servers to enterprise-grade hosting, 
+              Deploy your game servers and Discord bots instantly with Lylern. From free community servers to enterprise-grade hosting, 
               we've got you covered with unmatched performance and reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{"--delay-600": true} as any}>
@@ -47,6 +50,108 @@ const Index = () => {
               <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-300 hover:bg-cyan-500/10 text-lg px-8 py-4 transition-all duration-300 hover:scale-105 hover:border-cyan-400">
                 View Pricing
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Game Hosting Section */}
+      <section id="game-hosting" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in" style={{"--delay-200": true} as any}>
+            <h2 className="text-4xl font-bold text-white mb-4">Game Server Hosting</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Host your favorite games with enterprise-grade infrastructure and unbeatable performance.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-slide-in-right" style={{"--delay-400": true} as any}>
+              <img 
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80" 
+                alt="Gaming setup with multiple monitors" 
+                className="rounded-lg shadow-2xl hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="space-y-6 animate-fade-in" style={{"--delay-500": true} as any}>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center">
+                  <GamepadIcon className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">50+ Game Templates</h3>
+                  <p className="text-gray-300">Minecraft, CS2, Rust, Valheim, and many more</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Instant Deployment</h3>
+                  <p className="text-gray-300">Get your server running in under 60 seconds</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center">
+                  <Server className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Global Infrastructure</h3>
+                  <p className="text-gray-300">15+ locations worldwide for optimal latency</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bot Hosting Section */}
+      <section id="bot-hosting" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in" style={{"--delay-200": true} as any}>
+            <h2 className="text-4xl font-bold text-white mb-4">Discord Bot Hosting</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Keep your Discord bots online 24/7 with our reliable and scalable bot hosting platform.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 animate-fade-in" style={{"--delay-400": true} as any}>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                  <Bot className="w-6 h-6 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">24/7 Uptime</h3>
+                  <p className="text-gray-300">Keep your bots running around the clock</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Secure Environment</h3>
+                  <p className="text-gray-300">Isolated containers with enterprise security</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Auto-Restart</h3>
+                  <p className="text-gray-300">Automatic recovery from crashes and errors</p>
+                </div>
+              </div>
+            </div>
+            <div className="animate-slide-in-right" style={{"--delay-500": true} as any}>
+              <img 
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" 
+                alt="Programming code on monitor" 
+                className="rounded-lg shadow-2xl hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
         </div>
@@ -348,7 +453,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in" style={{"--delay-300": true} as any}>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Level Up Your Gaming?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of gamers who trust Lylern for their server hosting needs.
+            Join thousands of gamers and developers who trust Lylern for their hosting needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-lg px-8 py-4 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25">

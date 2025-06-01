@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +7,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+      <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800 animate-fade-in" style={{"--delay-100": true} as any}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2 animate-fade-in">
@@ -28,20 +27,20 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="animate-fade-in">
-            <Badge className="mb-6 bg-cyan-600/20 text-cyan-300 border-cyan-500/30 transition-all duration-300 hover:scale-105 hover:bg-cyan-600/30">
+          <div className="animate-fade-in" style={{"--delay-200": true} as any}>
+            <Badge className="mb-6 bg-cyan-600/20 text-cyan-300 border-cyan-500/30 animate-scale-in" style={{"--delay-300": true} as any}>
               <Zap className="w-4 h-4 mr-1 animate-pulse" />
               Lightning Fast Gaming Servers
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in [animation-delay:200ms]">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in" style={{"--delay-400": true} as any}>
               Game Server Hosting
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 animate-pulse"> Made Simple</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:400ms]">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{"--delay-500": true} as any}>
               Deploy your game servers instantly with Lylern. From free community servers to enterprise-grade hosting, 
               we've got you covered with unmatched performance and reliability.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in [animation-delay:600ms]">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{"--delay-600": true} as any}>
               <Button size="lg" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-lg px-8 py-4 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25">
                 Start Free Server
               </Button>
@@ -56,7 +55,7 @@ const Index = () => {
       {/* Features Section */}
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16 animate-fade-in" style={{"--delay-700": true} as any}>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Lylern?</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Built by gamers, for gamers. Our platform delivers the performance and features you need.
@@ -64,7 +63,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:100ms]">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-scale-in" style={{"--delay-800": true} as any}>
               <CardHeader>
                 <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
                   <Zap className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
@@ -76,7 +75,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:200ms]">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-scale-in" style={{"--delay-900": true} as any}>
               <CardHeader>
                 <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
                   <Shield className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
@@ -88,7 +87,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:300ms]">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-scale-in" style={{"--delay-1000": true} as any}>
               <CardHeader>
                 <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
                   <Clock className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
@@ -100,7 +99,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:400ms]">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-slide-in-right" style={{"--delay-800": true} as any}>
               <CardHeader>
                 <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
                   <Users className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
@@ -112,7 +111,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:500ms]">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-slide-in-right" style={{"--delay-900": true} as any}>
               <CardHeader>
                 <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
                   <Server className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
@@ -124,7 +123,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:600ms]">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-slide-in-right" style={{"--delay-1000": true} as any}>
               <CardHeader>
                 <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
                   <GamepadIcon className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
@@ -142,7 +141,7 @@ const Index = () => {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16 animate-fade-in" style={{"--delay-200": true} as any}>
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Start free and scale as you grow. No hidden fees, no surprises.
@@ -151,7 +150,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Free Plan */}
-            <Card className="bg-gray-900 border-gray-800 relative transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 animate-fade-in [animation-delay:100ms]">
+            <Card className="bg-gray-900 border-gray-800 relative transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 animate-scale-in" style={{"--delay-400": true} as any}>
               <CardHeader>
                 <CardTitle className="text-2xl text-white">Free</CardTitle>
                 <div className="text-4xl font-bold text-cyan-400">$0<span className="text-lg text-gray-400">/month</span></div>
@@ -183,7 +182,7 @@ const Index = () => {
             </Card>
 
             {/* Pro Plan */}
-            <Card className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 border-cyan-400 relative scale-105 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fade-in [animation-delay:200ms]">
+            <Card className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 border-cyan-400 relative scale-105 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/20 animate-scale-in" style={{"--delay-500": true} as any}>
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white animate-pulse">Most Popular</Badge>
               </div>
@@ -222,7 +221,7 @@ const Index = () => {
             </Card>
 
             {/* Enterprise Plan */}
-            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 animate-fade-in [animation-delay:300ms]">
+            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 animate-scale-in" style={{"--delay-600": true} as any}>
               <CardHeader>
                 <CardTitle className="text-2xl text-white">Enterprise</CardTitle>
                 <div className="text-4xl font-bold text-cyan-400">$29.99<span className="text-lg text-gray-400">/month</span></div>
@@ -263,13 +262,13 @@ const Index = () => {
       {/* Testimonials */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16 animate-fade-in" style={{"--delay-200": true} as any}>
             <h2 className="text-4xl font-bold text-white mb-4">Trusted by Gamers Worldwide</h2>
             <p className="text-xl text-gray-300">See what our community has to say</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-fade-in [animation-delay:100ms]">
+            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-slide-in-right" style={{"--delay-400": true} as any}>
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -293,7 +292,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-fade-in [animation-delay:200ms]">
+            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-slide-in-right" style={{"--delay-500": true} as any}>
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -317,7 +316,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-fade-in [animation-delay:300ms]">
+            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-slide-in-right" style={{"--delay-600": true} as any}>
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -346,7 +345,7 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in" style={{"--delay-300": true} as any}>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Level Up Your Gaming?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of gamers who trust Lylern for their server hosting needs.
@@ -363,7 +362,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-black py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+      <footer id="contact" className="bg-black py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800 animate-fade-in" style={{"--delay-400": true} as any}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">

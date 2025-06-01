@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,94 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Cool loading animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Animation delays */
+[style*="--delay-100"] {
+  animation-delay: 100ms;
+}
+
+[style*="--delay-200"] {
+  animation-delay: 200ms;
+}
+
+[style*="--delay-300"] {
+  animation-delay: 300ms;
+}
+
+[style*="--delay-400"] {
+  animation-delay: 400ms;
+}
+
+[style*="--delay-500"] {
+  animation-delay: 500ms;
+}
+
+[style*="--delay-600"] {
+  animation-delay: 600ms;
+}
+
+[style*="--delay-700"] {
+  animation-delay: 700ms;
+}
+
+[style*="--delay-800"] {
+  animation-delay: 800ms;
+}
+
+[style*="--delay-900"] {
+  animation-delay: 900ms;
+}
+
+[style*="--delay-1000"] {
+  animation-delay: 1000ms;
 }

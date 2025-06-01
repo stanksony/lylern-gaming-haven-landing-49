@@ -8,19 +8,19 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
+      <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <GamepadIcon className="h-8 w-8 text-purple-400" />
+            <div className="flex items-center space-x-2 animate-fade-in">
+              <GamepadIcon className="h-8 w-8 text-cyan-400 transition-transform duration-300 hover:scale-110" />
               <span className="text-2xl font-bold text-white">Lylern</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-300 hover:text-purple-400 transition-colors">Features</a>
-              <a href="#pricing" className="text-gray-300 hover:text-purple-400 transition-colors">Pricing</a>
-              <a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors">Contact</a>
+              <a href="#features" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Features</a>
+              <a href="#pricing" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Pricing</a>
+              <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Contact</a>
             </div>
-            <Button className="bg-purple-600 hover:bg-purple-700">Get Started</Button>
+            <Button className="bg-cyan-600 hover:bg-cyan-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">Get Started</Button>
           </div>
         </div>
       </nav>
@@ -29,23 +29,23 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="animate-fade-in">
-            <Badge className="mb-6 bg-purple-600/20 text-purple-300 border-purple-500/30">
-              <Zap className="w-4 h-4 mr-1" />
+            <Badge className="mb-6 bg-cyan-600/20 text-cyan-300 border-cyan-500/30 transition-all duration-300 hover:scale-105 hover:bg-cyan-600/30">
+              <Zap className="w-4 h-4 mr-1 animate-pulse" />
               Lightning Fast Gaming Servers
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in [animation-delay:200ms]">
               Game Server Hosting
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"> Made Simple</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 animate-pulse"> Made Simple</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:400ms]">
               Deploy your game servers instantly with Lylern. From free community servers to enterprise-grade hosting, 
               we've got you covered with unmatched performance and reliability.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-lg px-8 py-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in [animation-delay:600ms]">
+              <Button size="lg" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-lg px-8 py-4 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25">
                 Start Free Server
               </Button>
-              <Button size="lg" variant="outline" className="border-purple-500 text-purple-300 hover:bg-purple-500/10 text-lg px-8 py-4">
+              <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-300 hover:bg-cyan-500/10 text-lg px-8 py-4 transition-all duration-300 hover:scale-105 hover:border-cyan-400">
                 View Pricing
               </Button>
             </div>
@@ -56,7 +56,7 @@ const Index = () => {
       {/* Features Section */}
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Lylern?</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Built by gamers, for gamers. Our platform delivers the performance and features you need.
@@ -64,72 +64,72 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:100ms]">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
+                  <Zap className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <CardTitle className="text-white">Instant Deployment</CardTitle>
+                <CardTitle className="text-white group-hover:text-cyan-100 transition-colors duration-300">Instant Deployment</CardTitle>
                 <CardDescription className="text-gray-300">
                   Get your server running in under 60 seconds with our one-click deployment system.
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:200ms]">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
+                  <Shield className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <CardTitle className="text-white">DDoS Protection</CardTitle>
+                <CardTitle className="text-white group-hover:text-cyan-100 transition-colors duration-300">DDoS Protection</CardTitle>
                 <CardDescription className="text-gray-300">
                   Enterprise-grade DDoS protection keeps your server online 24/7.
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:300ms]">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                  <Clock className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
+                  <Clock className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <CardTitle className="text-white">99.9% Uptime</CardTitle>
+                <CardTitle className="text-white group-hover:text-cyan-100 transition-colors duration-300">99.9% Uptime</CardTitle>
                 <CardDescription className="text-gray-300">
                   Guaranteed uptime with automatic failover and redundant infrastructure.
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:400ms]">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
+                  <Users className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <CardTitle className="text-white">24/7 Support</CardTitle>
+                <CardTitle className="text-white group-hover:text-cyan-100 transition-colors duration-300">24/7 Support</CardTitle>
                 <CardDescription className="text-gray-300">
                   Expert gaming support team available around the clock to help you.
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:500ms]">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                  <Server className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
+                  <Server className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <CardTitle className="text-white">Global Locations</CardTitle>
+                <CardTitle className="text-white group-hover:text-cyan-100 transition-colors duration-300">Global Locations</CardTitle>
                 <CardDescription className="text-gray-300">
                   Servers in 15+ locations worldwide for optimal latency and performance.
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/40 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 group animate-fade-in [animation-delay:600ms]">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                  <GamepadIcon className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-600/30 transition-all duration-300">
+                  <GamepadIcon className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <CardTitle className="text-white">Game Templates</CardTitle>
+                <CardTitle className="text-white group-hover:text-cyan-100 transition-colors duration-300">Game Templates</CardTitle>
                 <CardDescription className="text-gray-300">
                   Pre-configured templates for Minecraft, CS2, Rust, and 50+ other games.
                 </CardDescription>
@@ -142,7 +142,7 @@ const Index = () => {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Start free and scale as you grow. No hidden fees, no surprises.
@@ -151,107 +151,107 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Free Plan */}
-            <Card className="bg-gray-900 border-gray-800 relative">
+            <Card className="bg-gray-900 border-gray-800 relative transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 animate-fade-in [animation-delay:100ms]">
               <CardHeader>
                 <CardTitle className="text-2xl text-white">Free</CardTitle>
-                <div className="text-4xl font-bold text-purple-400">$0<span className="text-lg text-gray-400">/month</span></div>
+                <div className="text-4xl font-bold text-cyan-400">$0<span className="text-lg text-gray-400">/month</span></div>
                 <CardDescription className="text-gray-300">Perfect for small communities</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     1GB RAM
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     10 player slots
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     Basic DDoS protection
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     Community support
                   </li>
                 </ul>
-                <Button className="w-full border border-purple-500 text-purple-300 hover:bg-purple-500/10" variant="outline">
+                <Button className="w-full border border-cyan-500 text-cyan-300 hover:bg-cyan-500/10 transition-all duration-300 hover:scale-105 hover:border-cyan-400" variant="outline">
                   Get Started Free
                 </Button>
               </CardContent>
             </Card>
 
             {/* Pro Plan */}
-            <Card className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border-purple-400 relative scale-105">
+            <Card className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 border-cyan-400 relative scale-105 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fade-in [animation-delay:200ms]">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-gradient-to-r from-purple-600 to-pink-600 text-white">Most Popular</Badge>
+                <Badge className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white animate-pulse">Most Popular</Badge>
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl text-white">Pro</CardTitle>
-                <div className="text-4xl font-bold text-purple-400">$9.99<span className="text-lg text-gray-400">/month</span></div>
+                <div className="text-4xl font-bold text-cyan-400">$9.99<span className="text-lg text-gray-400">/month</span></div>
                 <CardDescription className="text-gray-300">Ideal for serious gamers</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     4GB RAM
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     50 player slots
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     Advanced DDoS protection
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     Priority support
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     Custom subdomain
                   </li>
                 </ul>
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                <Button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
                   Start Pro Plan
                 </Button>
               </CardContent>
             </Card>
 
             {/* Enterprise Plan */}
-            <Card className="bg-gray-900 border-gray-800">
+            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 animate-fade-in [animation-delay:300ms]">
               <CardHeader>
                 <CardTitle className="text-2xl text-white">Enterprise</CardTitle>
-                <div className="text-4xl font-bold text-purple-400">$29.99<span className="text-lg text-gray-400">/month</span></div>
+                <div className="text-4xl font-bold text-cyan-400">$29.99<span className="text-lg text-gray-400">/month</span></div>
                 <CardDescription className="text-gray-300">For large communities</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     16GB RAM
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     Unlimited slots
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     Enterprise DDoS protection
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     24/7 phone support
                   </li>
-                  <li className="flex items-center text-gray-300">
+                  <li className="flex items-center text-gray-300 transition-all duration-300 hover:text-cyan-200">
                     <Check className="w-5 h-5 text-green-400 mr-2" />
                     Custom domain
                   </li>
                 </ul>
-                <Button className="w-full border border-purple-500 text-purple-300 hover:bg-purple-500/10" variant="outline">
+                <Button className="w-full border border-cyan-500 text-cyan-300 hover:bg-cyan-500/10 transition-all duration-300 hover:scale-105 hover:border-cyan-400" variant="outline">
                   Contact Sales
                 </Button>
               </CardContent>
@@ -263,17 +263,17 @@ const Index = () => {
       {/* Testimonials */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-white mb-4">Trusted by Gamers Worldwide</h2>
             <p className="text-xl text-gray-300">See what our community has to say</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gray-900 border-gray-800">
+            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-fade-in [animation-delay:100ms]">
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 transition-transform duration-300 hover:scale-110" />
                   ))}
                 </div>
                 <CardDescription className="text-gray-300 text-lg">
@@ -282,7 +282,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-cyan-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <span className="text-white font-bold">AX</span>
                   </div>
                   <div>
@@ -293,11 +293,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800">
+            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-fade-in [animation-delay:200ms]">
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 transition-transform duration-300 hover:scale-110" />
                   ))}
                 </div>
                 <CardDescription className="text-gray-300 text-lg">
@@ -306,7 +306,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <span className="text-white font-bold">SM</span>
                   </div>
                   <div>
@@ -317,11 +317,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800">
+            <Card className="bg-gray-900 border-gray-800 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 hover:border-cyan-500/30 animate-fade-in [animation-delay:300ms]">
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 transition-transform duration-300 hover:scale-110" />
                   ))}
                 </div>
                 <CardDescription className="text-gray-300 text-lg">
@@ -330,7 +330,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <span className="text-white font-bold">MJ</span>
                   </div>
                   <div>
@@ -346,16 +346,16 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Level Up Your Gaming?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of gamers who trust Lylern for their server hosting needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-lg px-8 py-4">
+            <Button size="lg" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-lg px-8 py-4 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25">
               Start Your Free Server
             </Button>
-            <Button size="lg" variant="outline" className="border-purple-500 text-purple-300 hover:bg-purple-500/10 text-lg px-8 py-4">
+            <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-300 hover:bg-cyan-500/10 text-lg px-8 py-4 transition-all duration-300 hover:scale-105 hover:border-cyan-400">
               Talk to Sales
             </Button>
           </div>
@@ -367,14 +367,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <GamepadIcon className="h-8 w-8 text-purple-400" />
+              <GamepadIcon className="h-8 w-8 text-cyan-400 transition-transform duration-300 hover:scale-110" />
               <span className="text-2xl font-bold text-white">Lylern</span>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Privacy</a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Terms</a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Support</a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Discord</a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Privacy</a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Terms</a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Support</a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">Discord</a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">

@@ -6,9 +6,9 @@ import { Check, Zap, Shield, Clock, Users, Server, GamepadIcon, Star } from "luc
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-purple-500/20">
+      <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
@@ -54,7 +54,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Lylern?</h2>
@@ -64,7 +64,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-slate-800/50 border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="w-6 h-6 text-purple-400" />
@@ -76,7 +76,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-purple-400" />
@@ -88,7 +88,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                   <Clock className="w-6 h-6 text-purple-400" />
@@ -100,7 +100,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-purple-400" />
@@ -112,7 +112,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                   <Server className="w-6 h-6 text-purple-400" />
@@ -124,7 +124,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                   <GamepadIcon className="w-6 h-6 text-purple-400" />
@@ -151,7 +151,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Free Plan */}
-            <Card className="bg-slate-800/50 border-purple-500/20 relative">
+            <Card className="bg-gray-900 border-gray-800 relative">
               <CardHeader>
                 <CardTitle className="text-2xl text-white">Free</CardTitle>
                 <div className="text-4xl font-bold text-purple-400">$0<span className="text-lg text-gray-400">/month</span></div>
@@ -222,7 +222,7 @@ const Index = () => {
             </Card>
 
             {/* Enterprise Plan */}
-            <Card className="bg-slate-800/50 border-purple-500/20">
+            <Card className="bg-gray-900 border-gray-800">
               <CardHeader>
                 <CardTitle className="text-2xl text-white">Enterprise</CardTitle>
                 <div className="text-4xl font-bold text-purple-400">$29.99<span className="text-lg text-gray-400">/month</span></div>
@@ -261,7 +261,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Trusted by Gamers Worldwide</h2>
@@ -269,7 +269,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-slate-800/50 border-purple-500/20">
+            <Card className="bg-gray-900 border-gray-800">
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -293,7 +293,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20">
+            <Card className="bg-gray-900 border-gray-800">
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -317,7 +317,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20">
+            <Card className="bg-gray-900 border-gray-800">
               <CardHeader>
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -363,7 +363,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-slate-900 py-12 px-4 sm:px-6 lg:px-8 border-t border-purple-500/20">
+      <footer id="contact" className="bg-black py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
@@ -377,7 +377,7 @@ const Index = () => {
               <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Discord</a>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-purple-500/20 text-center text-gray-400">
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
             <p>&copy; 2024 Lylern. All rights reserved. Built for gamers, by gamers.</p>
           </div>
         </div>

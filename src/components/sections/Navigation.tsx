@@ -6,6 +6,10 @@ import { useState } from "react";
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleRedirect = () => {
+    window.location.href = "https://client.lylern.cloud/";
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-xl border-b border-gray-700/50 animate-fade-in shadow-2xl" style={{"--delay-100": true} as any}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,8 +29,17 @@ export const Navigation = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-gray-200 hover:text-white hover:bg-gray-700/50 text-sm font-semibold px-4 py-2">Login</Button>
-            <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl font-bold text-sm px-6 py-2 transition-all duration-300 hover:scale-105 shadow-2xl border-0">
+            <Button 
+              variant="ghost" 
+              className="text-gray-200 hover:text-white hover:bg-gray-700/50 text-sm font-semibold px-4 py-2"
+              onClick={handleRedirect}
+            >
+              Login
+            </Button>
+            <Button 
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl font-bold text-sm px-6 py-2 transition-all duration-300 hover:scale-105 shadow-2xl border-0"
+              onClick={handleRedirect}
+            >
               GET STARTED
             </Button>
           </div>
@@ -46,7 +59,12 @@ export const Navigation = () => {
               <a href="#bot-hosting" className="text-gray-200 hover:text-purple-300 transition-colors text-sm font-semibold">Bot Hosting</a>
               <a href="#pricing" className="text-gray-200 hover:text-green-300 transition-colors text-sm font-semibold">Pricing</a>
               <a href="#contact" className="text-gray-200 hover:text-cyan-300 transition-colors text-sm font-semibold">Contact</a>
-              <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 mt-4 rounded-xl font-bold text-sm py-2">GET STARTED</Button>
+              <Button 
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 mt-4 rounded-xl font-bold text-sm py-2"
+                onClick={handleRedirect}
+              >
+                GET STARTED
+              </Button>
             </div>
           </div>
         )}

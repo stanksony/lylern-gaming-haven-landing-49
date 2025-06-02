@@ -4,6 +4,10 @@ import { Badge } from "@/components/ui/badge";
 import { Zap, GamepadIcon, ArrowRight, Rocket } from "lucide-react";
 
 export const Hero = () => {
+  const handleRedirect = () => {
+    window.location.href = "https://client.lylern.cloud/";
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black relative overflow-hidden">
       {/* Gradient overlay */}
@@ -41,7 +45,11 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{"--delay-600": true} as any}>
-            <Button size="lg" className="group bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 hover:from-blue-600 hover:via-blue-700 hover:to-purple-700 text-white text-lg px-12 py-6 h-auto rounded-xl font-bold transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 border-0 shadow-xl">
+            <Button 
+              size="lg" 
+              className="group bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 hover:from-blue-600 hover:via-blue-700 hover:to-purple-700 text-white text-lg px-12 py-6 h-auto rounded-xl font-bold transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 border-0 shadow-xl"
+              onClick={handleRedirect}
+            >
               START DOMINATING NOW
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
@@ -57,11 +65,11 @@ export const Hero = () => {
               <div className="text-gray-300 text-sm uppercase tracking-wider font-medium">UPTIME</div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-black text-purple-400 mb-2">50+</div>
+              <div className="text-3xl font-black text-purple-400 mb-2">6+</div>
               <div className="text-gray-300 text-sm uppercase tracking-wider font-medium">GAMES</div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-black text-cyan-400 mb-2">15+</div>
+              <div className="text-3xl font-black text-cyan-400 mb-2">2+</div>
               <div className="text-gray-300 text-sm uppercase tracking-wider font-medium">LOCATIONS</div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">

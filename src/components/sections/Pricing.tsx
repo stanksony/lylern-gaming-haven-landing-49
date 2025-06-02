@@ -61,6 +61,10 @@ const plans = [
 ];
 
 export const Pricing = () => {
+  const handleRedirect = () => {
+    window.location.href = "https://client.lylern.cloud/";
+  };
+
   return (
     <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">
@@ -124,6 +128,7 @@ export const Pricing = () => {
                       : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
                   }`}
                   variant={plan.buttonVariant}
+                  onClick={handleRedirect}
                 >
                   {plan.buttonText}
                 </Button>

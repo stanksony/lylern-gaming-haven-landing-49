@@ -8,72 +8,86 @@ export const Hero = () => {
     window.location.href = "https://client.lylern.cloud/";
   };
 
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black relative overflow-hidden">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-black to-purple-900/30"></div>
+      {/* Enhanced gradient overlay with animations */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-black to-purple-900/30 animate-gradient-x"></div>
       
-      {/* Animated background elements */}
+      {/* Enhanced animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float stagger-3"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-float stagger-5"></div>
+        <div className="absolute top-10 right-1/4 w-48 h-48 bg-green-500/15 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-1/4 w-56 h-56 bg-pink-500/15 rounded-full blur-2xl animate-pulse stagger-2"></div>
       </div>
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <div className="animate-fade-in" style={{"--delay-200": true} as any}>
-          <Badge className="mb-8 bg-gradient-to-r from-blue-500/30 to-purple-500/30 text-blue-200 border-2 border-blue-400/50 px-6 py-2 text-sm font-bold backdrop-blur-md shadow-2xl animate-scale-in" style={{"--delay-300": true} as any}>
-            <Rocket className="w-4 h-4 mr-2 text-blue-300" />
+          <Badge className="mb-8 bg-gradient-to-r from-blue-500/30 to-purple-500/30 text-blue-200 border-2 border-blue-400/50 px-6 py-2 text-sm font-bold backdrop-blur-md shadow-2xl animate-bounce-in hover-glow" style={{"--delay-300": true} as any}>
+            <Rocket className="w-4 h-4 mr-2 text-blue-300 animate-rotate-in" />
             NEXT-GEN HOSTING IS HERE
           </Badge>
           
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-none animate-fade-in tracking-tight" style={{"--delay-400": true} as any}>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-purple-300 drop-shadow-2xl">
+          <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-none animate-scale-in tracking-tight hover-scale" style={{"--delay-400": true} as any}>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-white to-purple-300 drop-shadow-2xl animate-shimmer">
               LYLERN
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in font-light" style={{"--delay-500": true} as any}>
+          <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-in-left font-light" style={{"--delay-500": true} as any}>
             Stop settling for trash hosting. 
-            <span className="text-blue-300 font-semibold"> Deploy like a boss</span>, 
-            <span className="text-purple-300 font-semibold"> scale like a legend</span>, 
-            <span className="text-cyan-300 font-semibold"> dominate like a champion</span>.
+            <span className="text-blue-300 font-semibold animate-glow-pulse"> Deploy like a boss</span>, 
+            <span className="text-purple-300 font-semibold animate-glow-pulse stagger-1"> scale like a legend</span>, 
+            <span className="text-cyan-300 font-semibold animate-glow-pulse stagger-2"> dominate like a champion</span>.
             <br />
-            <span className="text-base md:text-lg text-gray-400 mt-2 block">
+            <span className="text-base md:text-lg text-gray-400 mt-2 block animate-fade-in stagger-4">
               Your games deserve better. Your players demand it.
             </span>
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in" style={{"--delay-600": true} as any}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-in-right" style={{"--delay-600": true} as any}>
             <Button 
               size="lg" 
-              className="group bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 hover:from-blue-600 hover:via-blue-700 hover:to-purple-700 text-white text-lg px-12 py-6 h-auto rounded-xl font-bold transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 border-0 shadow-xl"
+              className="group bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 hover:from-blue-600 hover:via-blue-700 hover:to-purple-700 text-white text-lg px-12 py-6 h-auto rounded-xl font-bold transition-all duration-500 hover-lift hover-glow border-0 shadow-xl animate-bounce-in"
               onClick={handleRedirect}
             >
               START DOMINATING NOW
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-gray-500 bg-black/70 text-gray-200 hover:bg-gray-800/90 hover:text-white hover:border-gray-300 text-lg px-12 py-6 h-auto rounded-xl font-bold transition-all duration-500 hover:scale-105 backdrop-blur-md shadow-xl">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-gray-500 bg-black/70 text-gray-200 hover:bg-gray-800/90 hover:text-white hover:border-gray-300 text-lg px-12 py-6 h-auto rounded-xl font-bold transition-all duration-500 hover-scale backdrop-blur-md shadow-xl animate-bounce-in stagger-1"
+              onClick={scrollToPricing}
+            >
               VIEW PRICING
             </Button>
           </div>
 
-          {/* Stats */}
+          {/* Enhanced Stats with staggered animations */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 animate-fade-in" style={{"--delay-700": true} as any}>
-            <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-black text-blue-400 mb-2">99.9%</div>
+            <div className="text-center group hover-lift hover-glow animate-bounce-in stagger-1">
+              <div className="text-3xl font-black text-blue-400 mb-2 animate-glow-pulse">99.9%</div>
               <div className="text-gray-300 text-sm uppercase tracking-wider font-medium">UPTIME</div>
             </div>
-            <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-black text-purple-400 mb-2">6+</div>
+            <div className="text-center group hover-lift hover-glow animate-bounce-in stagger-2">
+              <div className="text-3xl font-black text-purple-400 mb-2 animate-glow-pulse">6+</div>
               <div className="text-gray-300 text-sm uppercase tracking-wider font-medium">GAMES</div>
             </div>
-            <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-black text-cyan-400 mb-2">2+</div>
+            <div className="text-center group hover-lift hover-glow animate-bounce-in stagger-3">
+              <div className="text-3xl font-black text-cyan-400 mb-2 animate-glow-pulse">2+</div>
               <div className="text-gray-300 text-sm uppercase tracking-wider font-medium">LOCATIONS</div>
             </div>
-            <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-black text-green-400 mb-2">24/7</div>
+            <div className="text-center group hover-lift hover-glow animate-bounce-in stagger-4">
+              <div className="text-3xl font-black text-green-400 mb-2 animate-glow-pulse">24/7</div>
               <div className="text-gray-300 text-sm uppercase tracking-wider font-medium">SUPPORT</div>
             </div>
           </div>

@@ -11,8 +11,8 @@ const plans = [
     period: "/month",
     description: "Perfect for testing and small projects",
     features: [
-      "1GB RAM",
-      "10 player slots",
+      "3GB RAM",
+      "Unlimited slots",
       "Basic DDoS protection",
       "Community support",
       "1 server instance"
@@ -27,8 +27,8 @@ const plans = [
     period: "/month",
     description: "Ideal for serious gamers and communities",
     features: [
-      "4GB RAM",
-      "50 player slots",
+      "8GB RAM",
+      "Unlimited slots",
       "Advanced DDoS protection",
       "Priority support",
       "Custom subdomain",

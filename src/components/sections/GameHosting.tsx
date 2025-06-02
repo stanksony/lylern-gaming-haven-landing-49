@@ -21,8 +21,8 @@ export const GameHosting = () => {
                   <GamepadIcon className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">50+ Game Templates</h3>
-                  <p className="text-gray-300 text-lg">Minecraft, CS2, Rust, Valheim, and many more</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">6+ Game Templates</h3>
+                  <p className="text-gray-300 text-lg">Minecraft, CS2, Rust, Valheim, Garry's Mod, and ARK</p>
                 </div>
               </div>
               
@@ -42,7 +42,7 @@ export const GameHosting = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Global Infrastructure</h3>
-                  <p className="text-gray-300 text-lg">15+ locations worldwide for optimal latency</p>
+                  <p className="text-gray-300 text-lg">2+ locations worldwide for optimal latency</p>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@ export const GameHosting = () => {
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-3xl p-8 backdrop-blur-sm border border-slate-700">
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-slate-800/50 rounded-xl p-6 text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">6+</div>
                   <div className="text-gray-300">Game Types</div>
                 </div>
                 <div className="bg-slate-800/50 rounded-xl p-6 text-center">
@@ -60,7 +60,7 @@ export const GameHosting = () => {
                   <div className="text-gray-300">Uptime</div>
                 </div>
                 <div className="bg-slate-800/50 rounded-xl p-6 text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">15+</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">2+</div>
                   <div className="text-gray-300">Locations</div>
                 </div>
                 <div className="bg-slate-800/50 rounded-xl p-6 text-center">

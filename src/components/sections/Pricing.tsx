@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -70,15 +69,15 @@ export const Pricing = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float stagger-2"></div>
+        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20 animate-slide-in-left" style={{"--delay-200": true} as any}>
+        <div className="text-center mb-20 animate-slide-in-left">
           <h2 className="text-5xl font-black text-white mb-6 hover-scale transition-transform duration-300">
-            Simple, Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-shimmer">Pricing</span>
+            Simple, Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{"--delay-400": true} as any}>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-in">
             Start free and scale as you grow. No hidden fees, no surprises. Choose the plan that fits your needs.
           </p>
         </div>
@@ -87,16 +86,15 @@ export const Pricing = () => {
           {plans.map((plan, index) => (
             <Card 
               key={plan.name}
-              className={`relative transition-all duration-500 hover-lift hover-glow animate-bounce-in ${
+              className={`relative transition-all duration-500 hover-lift animate-fade-in ${
                 plan.popular 
-                  ? 'bg-gradient-to-br from-blue-900/50 to-purple-900/50 border-blue-400 scale-105 shadow-2xl shadow-blue-500/20 animate-glow-pulse' 
+                  ? 'bg-gradient-to-br from-blue-900/50 to-purple-900/50 border-blue-400 scale-105 shadow-2xl shadow-blue-500/20' 
                   : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
-              } backdrop-blur-sm stagger-${index + 1}`}
-              style={{"--delay": `${400 + index * 100}ms`} as any}
+              } backdrop-blur-sm`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 text-sm font-semibold animate-bounce-in hover-glow">
+                  <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 text-sm font-semibold">
                     Most Popular
                   </Badge>
                 </div>
@@ -107,12 +105,12 @@ export const Pricing = () => {
                   {plan.name}
                 </CardTitle>
                 <div className="py-4">
-                  <span className={`text-5xl font-black ${plan.popular ? 'text-blue-400 animate-glow-pulse' : 'text-white'} hover-scale transition-transform duration-300`}>
+                  <span className={`text-5xl font-black ${plan.popular ? 'text-blue-400' : 'text-white'} hover-scale transition-transform duration-300`}>
                     {plan.price}
                   </span>
                   <span className="text-gray-400 text-lg">{plan.period}</span>
                 </div>
-                <CardDescription className="text-gray-300 text-base animate-fade-in" style={{"--delay": `${600 + index * 100}ms`} as any}>
+                <CardDescription className="text-gray-300 text-base animate-fade-in">
                   {plan.description}
                 </CardDescription>
               </CardHeader>
@@ -120,8 +118,8 @@ export const Pricing = () => {
               <CardContent className="space-y-6">
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={feature} className={`flex items-center text-gray-300 transition-all duration-300 hover:text-blue-200 hover-scale animate-slide-in-left stagger-${featureIndex + 1}`}>
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 animate-bounce-in" />
+                    <li key={feature} className="flex items-center text-gray-300 transition-all duration-300 hover:text-blue-200 hover-scale">
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -130,11 +128,11 @@ export const Pricing = () => {
                 <Button 
                   className={`w-full py-6 text-lg font-semibold rounded-xl transition-all duration-300 hover-lift ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover-glow animate-glow-pulse'
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
                       : plan.buttonVariant === 'outline'
-                      ? 'border-2 border-blue-500 text-blue-300 hover:bg-blue-500/10 hover:border-blue-400 hover-glow'
-                      : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover-glow'
-                  } animate-bounce-in`}
+                      ? 'border-2 border-blue-500 text-blue-300 hover:bg-blue-500/10 hover:border-blue-400'
+                      : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
+                  }`}
                   variant={plan.buttonVariant}
                   onClick={handleRedirect}
                 >

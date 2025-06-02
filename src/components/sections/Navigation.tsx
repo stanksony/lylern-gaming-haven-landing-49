@@ -18,33 +18,33 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-xl border-b border-gray-700/50 animate-slide-in-left shadow-2xl" style={{"--delay-100": true} as any}>
+    <nav className="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-xl border-b border-gray-700/50 animate-slide-in-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-3 animate-bounce-in">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl hover-scale hover-rotate hover-glow transition-all duration-300 animate-rotate-in">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center hover-scale transition-all duration-300">
               <GamepadIcon className="h-6 w-6 text-white" />
             </div>
-            <span className="text-2xl font-black text-white tracking-tight hover:text-blue-300 transition-all duration-300 hover-scale animate-shimmer">LYLERN</span>
+            <span className="text-2xl font-black text-white tracking-tight hover:text-blue-300 transition-all duration-300 hover-scale">LYLERN</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#game-hosting" className="text-gray-200 hover:text-blue-300 transition-all duration-300 font-semibold text-sm hover-scale animate-fade-in stagger-1">Game Hosting</a>
-            <a href="#bot-hosting" className="text-gray-200 hover:text-purple-300 transition-all duration-300 font-semibold text-sm hover-scale animate-fade-in stagger-2">Bot Hosting</a>
-            <button onClick={scrollToPricing} className="text-gray-200 hover:text-green-300 transition-all duration-300 font-semibold text-sm hover-scale animate-fade-in stagger-3">Pricing</button>
-            <a href="#contact" className="text-gray-200 hover:text-cyan-300 transition-all duration-300 font-semibold text-sm hover-scale animate-fade-in stagger-4">Contact</a>
+            <a href="#game-hosting" className="text-gray-200 hover:text-blue-300 transition-all duration-300 font-semibold text-sm hover-scale">Game Hosting</a>
+            <a href="#bot-hosting" className="text-gray-200 hover:text-purple-300 transition-all duration-300 font-semibold text-sm hover-scale">Bot Hosting</a>
+            <button onClick={scrollToPricing} className="text-gray-200 hover:text-green-300 transition-all duration-300 font-semibold text-sm hover-scale">Pricing</button>
+            <a href="#contact" className="text-gray-200 hover:text-cyan-300 transition-all duration-300 font-semibold text-sm hover-scale">Contact</a>
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
             <Button 
               variant="ghost" 
-              className="text-gray-200 hover:text-white hover:bg-gray-700/50 text-sm font-semibold px-4 py-2 hover-scale animate-slide-in-right"
+              className="text-gray-200 hover:text-white hover:bg-gray-700/50 text-sm font-semibold px-4 py-2 hover-scale"
               onClick={handleRedirect}
             >
               Login
             </Button>
             <Button 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl font-bold text-sm px-6 py-2 transition-all duration-300 hover-lift hover-glow shadow-2xl border-0 animate-bounce-in"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl font-bold text-sm px-6 py-2 transition-all duration-300 hover-lift border-0"
               onClick={handleRedirect}
             >
               GET STARTED
@@ -52,7 +52,7 @@ export const Navigation = () => {
           </div>
 
           <button 
-            className="md:hidden text-gray-200 hover:text-white transition-all duration-300 hover-rotate animate-fade-in"
+            className="md:hidden text-gray-200 hover:text-white transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -62,12 +62,12 @@ export const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-700/50 bg-black/98 backdrop-blur-xl animate-slide-in-left">
             <div className="flex flex-col space-y-4">
-              <a href="#game-hosting" className="text-gray-200 hover:text-blue-300 transition-colors text-sm font-semibold hover-scale animate-fade-in stagger-1">Game Hosting</a>
-              <a href="#bot-hosting" className="text-gray-200 hover:text-purple-300 transition-colors text-sm font-semibold hover-scale animate-fade-in stagger-2">Bot Hosting</a>
-              <button onClick={scrollToPricing} className="text-gray-200 hover:text-green-300 transition-colors text-sm font-semibold text-left hover-scale animate-fade-in stagger-3">Pricing</button>
-              <a href="#contact" className="text-gray-200 hover:text-cyan-300 transition-colors text-sm font-semibold hover-scale animate-fade-in stagger-4">Contact</a>
+              <a href="#game-hosting" className="text-gray-200 hover:text-blue-300 transition-colors text-sm font-semibold hover-scale">Game Hosting</a>
+              <a href="#bot-hosting" className="text-gray-200 hover:text-purple-300 transition-colors text-sm font-semibold hover-scale">Bot Hosting</a>
+              <button onClick={scrollToPricing} className="text-gray-200 hover:text-green-300 transition-colors text-sm font-semibold text-left hover-scale">Pricing</button>
+              <a href="#contact" className="text-gray-200 hover:text-cyan-300 transition-colors text-sm font-semibold hover-scale">Contact</a>
               <Button 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 mt-4 rounded-xl font-bold text-sm py-2 hover-lift hover-glow animate-bounce-in"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 mt-4 rounded-xl font-bold text-sm py-2 hover-lift"
                 onClick={handleRedirect}
               >
                 GET STARTED

@@ -7,34 +7,24 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-
     --radius: 0.5rem;
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -82,12 +72,17 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-slate-900 text-foreground font-sans;
   }
 }
 
-/* Simple, working animations */
-@keyframes fade-in {
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -98,7 +93,7 @@
   }
 }
 
-@keyframes slide-in-left {
+@keyframes slideInLeft {
   from {
     opacity: 0;
     transform: translateX(-30px);
@@ -109,7 +104,7 @@
   }
 }
 
-@keyframes slide-in-right {
+@keyframes slideInRight {
   from {
     opacity: 0;
     transform: translateX(30px);
@@ -129,29 +124,29 @@
   }
 }
 
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out;
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
 }
 
-.animate-slide-in-left {
-  animation: slide-in-left 0.6s ease-out;
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out;
 }
 
-.animate-slide-in-right {
-  animation: slide-in-right 0.6s ease-out;
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
 }
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Simple hover effects */
+/* Hover effects */
 .hover-scale {
   transition: transform 0.2s ease;
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .hover-lift {

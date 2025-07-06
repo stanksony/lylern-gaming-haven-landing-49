@@ -3,7 +3,7 @@ import { GamepadIcon } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="bg-black py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-800 animate-fade-in" style={{"--delay-400": true} as any}>
+    <footer id="contact" className="bg-slate-900 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-700">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
@@ -45,7 +45,7 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+        <div className="pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">&copy; 2024 Lylern. All rights reserved.</p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">Privacy Policy</a>

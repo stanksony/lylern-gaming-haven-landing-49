@@ -1,146 +1,218 @@
+
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const plans = [
   {
     name: "Starter",
-    price: "$0",
-    period: "/month",
-    description: "Perfect for testing and small projects",
+    price: 4.99,
+    ram: "3GB",
+    slots: "Unlimited",
     features: [
-      "3GB RAM",
-      "Unlimited slots",
-      "Basic DDoS protection",
-      "Community support",
-      "1 server instance"
+      "3GB DDR4 RAM",
+      "Unlimited Player Slots",
+      "Free Sub-domain",
+      "Instant Setup",
+      "DDoS Protection",
+      "24/7 Support"
     ],
-    buttonText: "Get Started Free",
-    buttonVariant: "outline" as const,
     popular: false
   },
   {
     name: "Pro",
-    price: "$9.99",
-    period: "/month",
-    description: "Ideal for serious gamers and communities",
+    price: 9.99,
+    ram: "8GB",
+    slots: "Unlimited", 
     features: [
-      "8GB RAM",
-      "Unlimited slots",
-      "Advanced DDoS protection",
-      "Priority support",
-      "Custom subdomain",
-      "5 server instances",
-      "Auto backups"
+      "8GB DDR4 RAM",
+      "Unlimited Player Slots",
+      "Free Domain",
+      "Priority Support",
+      "Advanced DDoS Protection",
+      "Free Backups",
+      "Plugin Installation"
     ],
-    buttonText: "Start Pro Plan",
-    buttonVariant: "default" as const,
     popular: true
   },
   {
     name: "Enterprise",
-    price: "$29.99",
-    period: "/month",
-    description: "For large communities and organizations",
+    price: 19.99,
+    ram: "16GB",
+    slots: "Unlimited",
     features: [
-      "16GB RAM",
-      "Unlimited slots",
-      "Enterprise DDoS protection",
-      "24/7 phone support",
-      "Custom domain",
-      "Unlimited instances",
-      "Daily backups",
-      "Dedicated support"
+      "16GB DDR4 RAM", 
+      "Unlimited Player Slots",
+      "Dedicated IP",
+      "White-glove Setup",
+      "Enterprise Support",
+      "Custom Configurations",
+      "Advanced Monitoring"
     ],
-    buttonText: "Contact Sales",
-    buttonVariant: "outline" as const,
     popular: false
   }
 ];
 
 export const Pricing = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 1,
+    hours: 15,
+    minutes: 8,
+    seconds: 51
+  });
+
   const handleRedirect = () => {
     window.location.href = "https://client.lylern.cloud/";
   };
 
-  return (
-    <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float"></div>
-      </div>
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else if (prev.minutes > 0) {
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+        } else if (prev.hours > 0) {
+          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
+        } else if (prev.days > 0) {
+          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
+        }
+        return prev;
+      });
+    }, 1000);
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20 animate-slide-in-left">
-          <h2 className="text-5xl font-black text-white mb-6 hover-scale transition-transform duration-300">
-            Simple, Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <div className="max-w-7xl mx-auto">
+        {/* Sale Banner */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 mb-16 text-center">
+          <h2 className="text-4xl font-black text-white mb-4">
+            GET 50% OFF YOUR SERVER!
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-            Start free and scale as you grow. No hidden fees, no surprises. Choose the plan that fits your needs.
+          <p className="text-xl text-blue-100 mb-6">
+            Get 50% off your first month and enjoy The Lylern Control Panel 2.0—faster, easier, and built for gamers. 
+            <span className="text-white font-semibold"> Learn More.</span>
           </p>
+          
+          {/* Countdown Timer */}
+          <div className="flex justify-center space-x-8 text-white">
+            <div className="text-center">
+              <div className="text-4xl font-bold bg-white/20 rounded-lg px-4 py-2">
+                {timeLeft.days}
+              </div>
+              <div className="text-sm mt-2">DAYS</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold bg-white/20 rounded-lg px-4 py-2">
+                {timeLeft.hours}
+              </div>
+              <div className="text-sm mt-2">HOURS</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold bg-white/20 rounded-lg px-4 py-2">
+                {timeLeft.minutes}
+              </div>
+              <div className="text-sm mt-2">MINS</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold bg-white/20 rounded-lg px-4 py-2">
+                {timeLeft.seconds}
+              </div>
+              <div className="text-sm mt-2">SEC</div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Billing Toggles */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-slate-800 rounded-lg p-1 flex">
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium">
+              Monthly
+            </button>
+            <button className="text-gray-300 px-6 py-2 rounded-lg font-medium hover:text-white relative">
+              Quarterly
+              <Badge className="absolute -top-2 -right-2 bg-blue-600 text-xs">10% OFF</Badge>
+            </button>
+            <button className="text-gray-300 px-6 py-2 rounded-lg font-medium hover:text-white relative">
+              Semi-Annually
+              <Badge className="absolute -top-2 -right-2 bg-purple-600 text-xs">20% OFF</Badge>
+            </button>
+            <button className="text-gray-300 px-6 py-2 rounded-lg font-medium hover:text-white relative">
+              Annually
+              <Badge className="absolute -top-2 -right-2 bg-green-600 text-xs">25% OFF</Badge>
+            </button>
+          </div>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <Card 
               key={plan.name}
-              className={`relative transition-all duration-500 hover-lift animate-fade-in ${
+              className={`bg-slate-800 border-2 transition-all duration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'bg-gradient-to-br from-blue-900/50 to-purple-900/50 border-blue-400 scale-105 shadow-2xl shadow-blue-500/20' 
-                  : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
-              } backdrop-blur-sm`}
+                  ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                  : 'border-slate-700 hover:border-slate-600'
+              }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 text-sm font-semibold">
-                    Most Popular
-                  </Badge>
+                <div className="bg-blue-600 text-white text-center py-2 text-sm font-bold rounded-t-lg">
+                  MOST POPULAR
                 </div>
               )}
               
-              <CardHeader className="text-center pb-8">
-                <CardTitle className={`text-2xl font-bold ${plan.popular ? 'text-white' : 'text-white'} hover-scale transition-transform duration-300`}>
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-2xl font-black text-white mb-2">
                   {plan.name}
                 </CardTitle>
-                <div className="py-4">
-                  <span className={`text-5xl font-black ${plan.popular ? 'text-blue-400' : 'text-white'} hover-scale transition-transform duration-300`}>
-                    {plan.price}
-                  </span>
-                  <span className="text-gray-400 text-lg">{plan.period}</span>
+                <div className="text-4xl font-black text-white mb-2">
+                  ${plan.price}<span className="text-lg text-gray-400">/month</span>
                 </div>
-                <CardDescription className="text-gray-300 text-base animate-fade-in">
-                  {plan.description}
-                </CardDescription>
+                <div className="text-gray-300">
+                  {plan.ram} RAM • {plan.slots} Slots
+                </div>
               </CardHeader>
-              
-              <CardContent className="space-y-6">
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={feature} className="flex items-center text-gray-300 transition-all duration-300 hover:text-blue-200 hover-scale">
+
+              <CardContent>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center text-gray-300">
                       <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>{feature}</span>
+                      {feature}
                     </li>
                   ))}
                 </ul>
                 
                 <Button 
-                  className={`w-full py-6 text-lg font-semibold rounded-xl transition-all duration-300 hover-lift ${
+                  className={`w-full font-bold py-6 text-lg ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
-                      : plan.buttonVariant === 'outline'
-                      ? 'border-2 border-blue-500 text-blue-300 hover:bg-blue-500/10 hover:border-blue-400'
-                      : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
+                      ? 'bg-blue-600 hover:bg-blue-700'
+                      : 'bg-slate-700 hover:bg-slate-600'
                   }`}
-                  variant={plan.buttonVariant}
                   onClick={handleRedirect}
                 >
-                  {plan.buttonText}
+                  Choose {plan.name}
                 </Button>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Bottom Section */}
+        <div className="mt-16 bg-gradient-to-r from-slate-800 to-blue-900 rounded-2xl p-8">
+          <div className="text-center">
+            <h3 className="text-3xl font-black text-white mb-4">
+              PLAY <span className="text-blue-400">VANILLA</span>
+            </h3>
+            <p className="text-gray-300 text-lg">
+              Experience Minecraft the way it was meant to be played
+            </p>
+          </div>
         </div>
       </div>
     </section>
